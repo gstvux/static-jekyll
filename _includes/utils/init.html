@@ -1,0 +1,8 @@
+{% comment %} {% assign base = site.env.remote.url %} {% endcomment %}
+{% if  jekyll.environment == 'development' %}
+    {% assign base = site.env.local.url %}
+{% else %}
+    {% assign base = site.env.remote.url %}
+{% endif %}
+{% assign imgpath = site.paths.img.url | prepend: base %}
+{% assign data = site.data %}
